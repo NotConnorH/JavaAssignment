@@ -1,18 +1,36 @@
 package assignment;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class FileScanner 
 {
-	public static void main(String args[]) throws IOException
+	private String file;
+	
+	FileScanner(String file)
 	{
-		Scanner file = new Scanner(new File("src/assignment/BadWords.txt"));
-		
-		while(file.hasNext())
-		{
-			String s = file.nextLine().trim();
-			System.out.println(s);
-		}
+		this.file = file;
 	}
+	
+	ArrayList<String> Scanner() throws FileNotFoundException
+	{	
+	
+		//Creates ArrayList that contains the Bad Words
+		ArrayList<String> Filescan = new ArrayList <String>();
+		//Creating scanner to read through BadWords.txt
+		Scanner wordsFile = new Scanner(new File(this.file));
+		
+		
+		while(wordsFile.hasNextLine())
+		{
+			Filescan.add(wordsFile.nextLine());
+		}
+		return Filescan;
+	}
+		
+	
+		
 }
