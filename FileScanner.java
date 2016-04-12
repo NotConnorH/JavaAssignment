@@ -2,7 +2,6 @@ package assignment;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -19,18 +18,18 @@ public class FileScanner
 	{	
 	
 		//Creates ArrayList that contains the Bad Words
-		ArrayList<String> Filescan = new ArrayList <String>();
+		ArrayList<String> fileScan = new ArrayList <String>();
 		//Creating scanner to read through BadWords.txt
 		Scanner wordsFile = new Scanner(new File(this.file));
 		
 		
 		while(wordsFile.hasNextLine())
 		{
-			Filescan.add(wordsFile.nextLine());
+			fileScan.add(wordsFile.nextLine());
 		}
-		return Filescan;
+		return fileScan;
 	}
-		
+
 	
 		
 }
