@@ -14,6 +14,7 @@ public class FileScanner
 		this.file = file;
 	}
 	
+	
 	ArrayList<String> Scanner() throws FileNotFoundException
 	{	
 	
@@ -22,14 +23,12 @@ public class FileScanner
 		//Creating scanner to read through BadWords.txt
 		Scanner wordsFile = new Scanner(new File(this.file));
 		
-		
+		//Scans the file line by line
 		while(wordsFile.hasNextLine())
 		{
 			fileScan.add(wordsFile.nextLine());
-		}
+		}//End While
 		return fileScan;
-	}
+	}//End File scanning
 
-	
-		
-}
+}//End FileScanner class

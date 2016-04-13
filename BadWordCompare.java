@@ -13,13 +13,13 @@ public class BadWordCompare
 	{
 		this.file1 = file1;
 		this.file2 = file2;
-	}
+	}//End Constructor
 
 	
 	void FindBadWords()
 	{	
-		//Changes to 1 if a bad word is found
-		int AbuseDetected = 0; 
+		int AbuseDetected = 0; //Changes to 1 if a bad word is found
+		//int CapsDetected = 0; // Changes to 1 if bad word is all caps
 		
 		//Compares each line of the Examples file against the list of BadWords
 		for (String line : file2)
@@ -27,11 +27,18 @@ public class BadWordCompare
 			for (String word : file1)
 			{
 				//If the post contains an abusive word, sets to 1
-				if((line.contains(word)))
+				if( (line.contains(word)) )
 				{
 					AbuseDetected = 1;
 					break;
 				}//End if
+				
+				/*
+				if( (line.isUpperCase()) )
+				{
+					CapsDetected = 1;
+				}//End if
+				*/
 				
 				//If the post doesn't contain an abusive word, sets to 0
 				else
@@ -41,11 +48,21 @@ public class BadWordCompare
 				
 			}//End for
 			
+			
 			//Tells user this post contains an abusive word
 			if(AbuseDetected == 1)
 			{
 				System.out.println("'" + line + "'    " + "This post is abusive, please alter it");
+			}//End if
+			
+			/*  
+			//Tells the user this bad word should be lower case
+			else if(AbuseDetected == 1 && CapsDetected == 1)
+			{
+				System.out.println("'" + line + "'    " + "This post is abusive and too loud, please alter it");
 			}
+			*/
+			
 			//Tells user this post is clean
 			else
 			{
@@ -57,5 +74,4 @@ public class BadWordCompare
 	}//End method FindBadWords
 	
 }//End class BadWordCompare
-	
 	

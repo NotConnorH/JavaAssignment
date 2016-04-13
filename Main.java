@@ -2,6 +2,7 @@ package assignment;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main 
 {
@@ -14,5 +15,18 @@ public class Main
 		BadWordCompare abusiveWords = new BadWordCompare(file1.Scanner(), file2.Scanner());
 		
 		abusiveWords.FindBadWords();
+		/*
+		
+		GUI gui1 = new GUI();
+		gui1.setVisible(true);
+		*/
+		
+		
+		Scanner userinput = new Scanner(System.in);
+		String userbadword = userinput.next();
+		
+		
+		FileWrite userword = new FileWrite(userbadword);
+		
 	}
 }
