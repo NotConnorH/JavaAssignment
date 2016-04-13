@@ -13,7 +13,7 @@ public class FileWrite
 	FileWrite(String word)
 	{
 		FileWrite.word = word;
-	}
+	}//End constructor
 	
 	void writebadword(String word) throws FileNotFoundException
 	{			
@@ -26,11 +26,13 @@ public class FileWrite
 			bw = new BufferedWriter(fw);
 			bw.write(word);
 			bw.close();
-		}
+		}//End try
 		
 		catch(IOException e)
 		{
 			e.printStackTrace();
-		}
-	}
-}
+		}//End catch
+		
+	}//End writebadword
+	
+}//End class FileWrite

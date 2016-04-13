@@ -14,7 +14,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import java.awt.Color;
 
-public class GUI extends JFrame {
+public class GUI extends JFrame 
+{
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -26,7 +27,8 @@ public class GUI extends JFrame {
 
 	 * Create the frame.
 	 */
-	public GUI() {
+	public GUI() 
+	{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 438);
 		contentPane = new JPanel();
@@ -40,10 +42,14 @@ public class GUI extends JFrame {
 		textField.setColumns(10);
 		
 		badbutton = new JButton("Add bad word");
-		badbutton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+		badbutton.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent arg0) 
+			{
+				
 			}
-		});
+		});//End addActionListener
+		
 		badbutton.setBounds(20, 67, 120, 23);
 		//badbutton.addActionListener((ActionListener) this);
 		contentPane.add(badbutton);
@@ -56,7 +62,7 @@ public class GUI extends JFrame {
 		scrollPane.setViewportView(textArea);
 		textArea.setBackground(Color.WHITE);
 		textArea.setEditable(false);
-	}
+	}//End GUI
 	
 	public void actionPerformed(ActionEvent e) 
 	{
@@ -66,9 +72,9 @@ public class GUI extends JFrame {
 			badword = textField.getText();
 			FileScanner.fileScan.add(badword);
 			textArea.append("the bad word added is : "+ badword);
-		}
-	}
+		}//End If
+	}//End actionPerformed
 	
-	}
+}//End outer GUI
 
 

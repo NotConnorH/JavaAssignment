@@ -28,5 +28,6 @@ public class Main
 		
 		FileWrite userword = new FileWrite(userbadword);
 		
-	}
-}
+	}//End main
+	
+}//End class Main

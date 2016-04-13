@@ -12,7 +12,7 @@ public class FileScanner
 	FileScanner(String file)
 	{
 		this.file = file;
-	}
+	}//End Constructor
 	
 	
 	ArrayList<String> Scanner() throws FileNotFoundException
@@ -28,6 +28,7 @@ public class FileScanner
 		{
 			fileScan.add(wordsFile.nextLine());
 		}//End While
+		
 		return fileScan;
 	}//End File scanning
 

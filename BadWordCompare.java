@@ -46,7 +46,7 @@ public class BadWordCompare
 					AbuseDetected = 0;
 				}//End else
 				
-			}//End for
+			}//End inner for
 			
 			
 			//Tells user this post contains an abusive word
@@ -69,7 +69,7 @@ public class BadWordCompare
 				System.out.println("'"+ line + "'    " + " Post not abusive, you're so lovely");
 			}//End else
 		
-		}//End for
+		}//End outer for
 		
 	}//End method FindBadWords
 	
